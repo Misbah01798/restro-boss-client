@@ -25,7 +25,7 @@ const Menu = () => {
         <title>Restro | Menu</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <Cover img={img3} title='OUR MENU'></Cover>
+      <Cover img={dessertImg} title={'Our Menu'}></Cover>
       <SectionTitle subHeader="Don't Miss" header="Today's Offer"></SectionTitle>
       <MenuCategory items={offered} ></MenuCategory>
       {/*dessert menu item */}
