@@ -3,6 +3,7 @@ import bg from '../../assets/home/banner.jpg'
 import { useContext, useEffect, useRef, useState } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const {signIn} =useContext(AuthContext);
@@ -23,6 +24,11 @@ const Login = () => {
         .then(result =>{
             const user =result.user;
             console.log(user);
+            Swal.fire({
+                title: "Good!",
+                text: `${user?.name} are Login Successful`,
+                icon: "success"
+              });
         })
 
      }
